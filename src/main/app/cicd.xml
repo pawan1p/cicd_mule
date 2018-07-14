@@ -11,7 +11,7 @@ http://www.springframework.org/schema/context http://www.springframework.org/sch
     <context:property-placeholder location="environment.properties"/>
     <flow name="cicdFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/cicd" doc:name="HTTP"/>
-        <set-payload value="hi ci cd !" doc:name="Set Payload"/>
+        <set-payload value="TEST" doc:name="Set Payload"/>
         <logger message="reseponse sent at #[server.dateTime]" level="INFO" doc:name="Logger"/>
     </flow>
 </mule>
